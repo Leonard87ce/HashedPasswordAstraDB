@@ -41,7 +41,7 @@ app.post('/signup', async (req, res) =>{
     try {
         const response = await axios(process.env.ASTRA_URL, options)
         res.status(200).json(response.data)
-    } catch (err) {
+    } catch (err) { 
         console.log(err)
         res.status(500).json({message: err})
     }
